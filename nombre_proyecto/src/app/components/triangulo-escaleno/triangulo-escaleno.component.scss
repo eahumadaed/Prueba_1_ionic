@@ -3,4 +3,39 @@
     font-size: 1.2em;
     color: #3880ff;
   }
-  
+.box-informativo {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .texto {
+    flex: 1;
+    padding-right: 10px;
+    text-align: justify;
+  }
+
+  img {
+    max-width: 400px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-informativo {
+    display: block;
+    text-align: left;
+  }
+
+  .box-informativo .texto {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .box-informativo img {
+    max-width: 100%;
+    padding-left: 0;
+  }
+}

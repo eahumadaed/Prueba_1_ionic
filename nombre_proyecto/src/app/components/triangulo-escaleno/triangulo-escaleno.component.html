@@ -1,26 +1,36 @@
 <ion-card>
   <ion-card-header>
-    <ion-card-title>Triángulo Escaleno</ion-card-title>
+    <ion-card-title>Triángulo</ion-card-title>
   </ion-card-header>
 
   <ion-card-content>
+    <div class="box-informativo">
+      <div class="texto">
+        <p><strong>Perímetro</strong></p>
+        <p>El perímetro de un triángulo es la suma de las longitudes de sus tres lados. En otras palabras, es la medida total del contorno o borde del triángulo.</p>
+      </div>
+      <img src="assets/Triangulo.png" alt="Fórmula del triángulo">
+    </div>
+
     <ion-item>
-      <ion-label position="stacked">Lado A</ion-label>
+      <ion-label position="stacked">Lado A (cm)</ion-label>
       <ion-input [(ngModel)]="ladoA" type="number"></ion-input>
     </ion-item>
+
     <ion-item>
-      <ion-label position="stacked">Lado B</ion-label>
+      <ion-label position="stacked">Lado B (cm)</ion-label>
       <ion-input [(ngModel)]="ladoB" type="number"></ion-input>
     </ion-item>
+
     <ion-item>
-      <ion-label position="stacked">Lado C</ion-label>
+      <ion-label position="stacked">Lado C (cm)</ion-label>
       <ion-input [(ngModel)]="ladoC" type="number"></ion-input>
     </ion-item>
-
-    <ion-button expand="full" (click)="calcularPerimetro()">Calcular Perímetro</ion-button>
+    
+    <ion-button expand="full" (click)="calcularPerimetro()">Calcular el Perímetro</ion-button>
     
     <div *ngIf="perimetro !== null" class="resultado">
-      <ion-text>El perímetro es: {{ perimetro | number:'1.2-2' }}</ion-text>
+      <ion-text>El perímetro es: {{ perimetro | number:'1.0-0' }} cm</ion-text>
     </div>
   </ion-card-content>
 </ion-card>
