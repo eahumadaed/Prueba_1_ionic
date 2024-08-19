@@ -1,0 +1,26 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Triángulo Escaleno</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="stacked">Lado A</ion-label>
+      <ion-input [(ngModel)]="ladoA" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Lado B</ion-label>
+      <ion-input [(ngModel)]="ladoB" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Lado C</ion-label>
+      <ion-input [(ngModel)]="ladoC" type="number"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="calcularPerimetro()">Calcular Perímetro</ion-button>
+    
+    <div *ngIf="perimetro !== null" class="resultado">
+      <ion-text>El perímetro es: {{ perimetro | number:'1.2-2' }}</ion-text>
+    </div>
+  </ion-card-content>
+</ion-card>
